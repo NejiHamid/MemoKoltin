@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <EditText
+        android:id="@+id/insertnote"
+        android:layout_width="@dimen/max"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/textMemo"
+        android:background="#003F51B5"
+        android:hint="@string/textMemo"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toBottomOf="@+id/btn"
+        app:layout_constraintEnd_toStartOf="@+id/btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E91E63"
+        android:onClick="insertMemo"
+        android:text="@string/ok"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myrecyclerview"
+        android:layout_width="@dimen/max"
+        android:layout_height="@dimen/max"
+        android:background="#54673AB7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
